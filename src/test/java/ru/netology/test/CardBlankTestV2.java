@@ -21,7 +21,7 @@ public class CardBlankTestV2 {
     @Test
     @Disabled
     void invalidNameBox() {
-        $("[data-test-id=name] input").setValue("Dima Black");
+        $("[data-test-id=name] input").setValue("Black Dima");
         $("[data-test-id=phone] input").setValue("+79227961604");
         $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
@@ -30,7 +30,7 @@ public class CardBlankTestV2 {
 
     @Test
     void invalidPhone() {
-        $("[data-test-id=name] input").setValue("Александр Иванов");
+        $("[data-test-id=name] input").setValue("Иванов Александр");
         $("[data-test-id=phone] input").setValue("79227961604");
         $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
@@ -39,7 +39,7 @@ public class CardBlankTestV2 {
 
     @Test
     void noClickCheckBox() {
-        $("[data-test-id=name] input").setValue("Александр Иванов");
+        $("[data-test-id=name] input").setValue("Иванов Александр");
         $("[data-test-id=phone] input").setValue("+79227961604");
         $("button[type=button]").click();
         $("[data-test-id=agreement].input_invalid").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
@@ -55,7 +55,7 @@ public class CardBlankTestV2 {
 
     @Test
     void emptyPhoneBox() {
-        $("[data-test-id=name] input").setValue("Александр Иванов");
+        $("[data-test-id=name] input").setValue("Иванов Александр");
         $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
         $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
