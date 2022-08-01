@@ -1,6 +1,5 @@
 package ru.netology.test;
 
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exactText;
@@ -14,7 +13,7 @@ public class CardBlankTestV1 {
     @Test
     void completedBlank() {
         open("http://localhost:9999/");
-        $("[data-test-id=name] input").setValue("Александр Иванов");
+        $("[data-test-id=name] input").setValue("Иванов Александр");
         $("[data-test-id=phone] input").setValue("+79227961604");
         $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
